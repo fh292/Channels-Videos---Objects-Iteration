@@ -150,7 +150,7 @@ console.log(getChannelName(channels[0]));
  ****************************************************************/
 
 function numberOfVideos(channel) {
-  return channels.filter((channel) => channel.videos).length;
+  return channel.videos.length;
 }
 console.log(numberOfVideos(channels[0]));
 
@@ -198,6 +198,8 @@ function getChannelByVideoTitle(videoTitle, channels) {
     channel.videos.some((video) => video.title === videoTitle)
   );
 }
+//another solution which uses the previous function created
+//return channels.find((channel) =>channelHasVideo(channel,videoTitle);
 console.log(getChannelByVideoTitle("The Universal S", channels));
 
 /**************************************************************
